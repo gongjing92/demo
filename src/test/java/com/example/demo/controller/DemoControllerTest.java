@@ -109,7 +109,7 @@ public class DemoControllerTest {
 	public void getAllUsersSalaryLessThan4000SortedBySalary() throws Exception {
 		MvcResult mvcResult = mockMvc.perform(get("/api/v1/users?sort=salary")).andExpect(status().isOk()).andReturn();
 		Result result = objectMapper.readValue(mvcResult.getResponse().getContentAsString(), Result.class);
- 		Assert.assertEquals("Tim", result.getUsers().get(0).getName());
+ 		Assert.assertEquals("Gerald", result.getUsers().get(0).getName());
 	}
 	
 	@Order(8)

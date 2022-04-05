@@ -40,7 +40,7 @@ public class UserServiceImpl implements UserService {
 			}
 				String name = userRecords.get(i)[0].trim();
 				Double salary = Double.parseDouble(userRecords.get(i)[1]);
-				if (salary > 0) {
+				if (salary >= 0) {
 					userRepo.saveUser(new User(name, salary));
 				}
 		}
